@@ -10,13 +10,13 @@ Suivis de mes cours
 
 Copier la commande pour créer un dossier qui clonera le contenue du dépôt.
 
-```bash
+```shell
 git clone https://github.com/MorinoBelgotaku/cours-algo.git
 ```
 
 Installer les modules requis au bon fonctionnement des scripts.
 
-```bash
+```shell
 npm i
 ```
 
