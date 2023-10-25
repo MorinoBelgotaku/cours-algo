@@ -1,5 +1,5 @@
-﻿[Pré-requis](#pré-requis)
-[Installation](#installation)
+﻿* [Pré-requis](#pré-requis)
+* [Installation](#installation)
 
 # Pré-requis
 
