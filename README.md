@@ -4,7 +4,7 @@ Suivis de mes cours
 
 # Pré-requis
 
-* Avoir <a href="https://nodejs.org/en/download/current" target="_blank">**NodeJS**</a>
+- Avoir [**NodesJS**](https://nodejs.org/en/download/current){:target="_blank"}
 
 # Installation
 
