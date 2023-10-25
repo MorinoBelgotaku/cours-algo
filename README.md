@@ -1,6 +1,5 @@
-﻿# cours-algo
-
-Suivis de mes cours
+﻿[Pré-requis](#pré-requis)
+[Installation](#installation)
 
 # Pré-requis
 
