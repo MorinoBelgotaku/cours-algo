@@ -13,7 +13,7 @@ const { input, select } = require('@inquirer/prompts'); // npm i @inquirer/promp
         return true;
       }
 
-    let nombre = await input({ message: `Donner un nombre premier :` });
+    let n = await input({ message: `Donner un nombre premier :` });
 
-    test_prime(nombre) ? console.log(`${nombre} est un nombre premier`) : console.log(`${nombre} n'est pas un nombre premier`);
+    test_prime(n) ? console.log(`${n} est un nombre premier`) : console.log(`${n} n'est pas un nombre premier`);
 })();
