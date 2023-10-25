@@ -1,0 +1,82 @@
+[
+    {
+        "question": "Quelle est la capitale de la France ?",
+        "reponse": "Paris"
+    },
+    {
+        "question": "Quelle est la capitale de la Suisse ?",
+        "reponse": "Berne"
+    },
+    {
+        "question": "La tomate est-elle un fruit ?",
+        "reponse": "Oui"
+    },
+    {
+        "question": "Que veut dire HTML ?",
+        "reponse": "Hyper Text Markup Language"
+    },
+    {
+        "question": "Ou se trouve le siege social de l'UE ? (Ville)",
+        "reponse": "Bruxelles"
+    },
+    {
+        "question": "Qui a cree l'entreprise Apple ? (Prenom + Nom)",
+        "reponse": "Steve Jobs"
+    },
+    {
+        "question": "Qui a cree l'entreprise Microsoft ? (Prenom + Nom)",
+        "reponse": "Bill Gates"
+    },
+    {
+        "question": "Quel reseau social est connu de Mark Zuckerberg ?",
+        "reponse": "Facebook"
+    },
+    {
+        "question": "En quelle annee fut l'independance de la Belgique ?",
+        "reponse": "1830"
+    },
+    {
+        "question": "Quelle est la racine carree de 81 ?",
+        "reponse": "9"
+    },
+    {
+        "question": "Combien fait 4 x (3+6) / 6 ?",
+        "reponse": "6"
+    },
+    {
+        "question": "Quel serie est connue de Herge ?",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "",
+        "reponse": ""
+    },
+    {
+        "question": "Combien font 2 + 2 ?",
+        "reponse": "4"
+    }
+]
