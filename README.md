@@ -1,7 +1,4 @@
-﻿* [Pré-requis](#pré-requis)
-* [Installation](#installation)
-
-# Pré-requis
+﻿# Pré-requis
 
 - Avoir [**NodesJS**](https://nodejs.org/en/download/current)
 
