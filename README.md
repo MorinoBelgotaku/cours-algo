@@ -1,6 +1,7 @@
 ﻿# Pré-requis
 
-- Avoir [**NodesJS**](https://nodejs.org/en/download/current)
+- [**NodesJS**](https://nodejs.org/en/download/current)
+- [**Git**](https://git-scm.com/)
 
 # Installation
 
