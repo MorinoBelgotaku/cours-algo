@@ -2,7 +2,7 @@
 const { input, select } = require('@inquirer/prompts'); // npm i @inquirer/prompts (version : 3.2.0)
 const chalk = require('chalk');
 const shuffle = require('shuffle-array');
-const quizz = require('./questions.json');
+const quiz = require('./questions.json');
 
 
 // Debut Code
@@ -28,19 +28,19 @@ const quizz = require('./questions.json');
 
         // Variables
 
-        shuffle(quizz);
+        shuffle(quiz);
         let total = 0;
 
 
         // Questions et calcul réponse
 
-        for (let i = 0; i < quizz.length; i++) {
-            let reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quizz[i]['question']}`)}` });
+        for (let i = 0; i < quiz.length; i++) {
+            let reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             while (reponse == "") {
                 console.clear();
-                reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quizz[i]['question']}`)}` });
+                reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             }
-            quizz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? total++ : null;
+            quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? total++ : null;
             console.clear();
         }
 
@@ -48,7 +48,7 @@ const quizz = require('./questions.json');
         // Affichage total
 
         console.clear();
-        console.log(chalk.cyan(`Tu as un total de ${total}/${quizz.length} ! ${total / quizz.length >= 0.5 ? `😀\n${chalk.green('Felicitations !\n')}` : `😭\n${chalk.red('Tu peux mieux faire !\n')}`}`));
+        console.log(chalk.cyan(`Tu as un total de ${total}/${quiz.length} ! ${total / quiz.length >= 0.5 ? `😀\n${chalk.green('Felicitations !\n')}` : `😭\n${chalk.red('Tu peux mieux faire !\n')}`}`));
 
         // Recommencer
 

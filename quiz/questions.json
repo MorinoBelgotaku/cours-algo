@@ -44,11 +44,11 @@
         "reponse": "6"
     },
     {
-        "question": "Quel serie est connue de Herge ?",
+        "question": "Quel serie de BD est connue de Herge ?",
         "reponse": "Tintin"
     },
     {
-        "question": "Qui a cree Paypal ?",
+        "question": "Qui a bien aide a creer Paypal ?",
         "reponse": "Elon Musk"
     },
     {
@@ -60,12 +60,12 @@
         "reponse": "IBM"
     },
     {
-        "question": "",
-        "reponse": ""
+        "question": "Que veut dire HDD ?",
+        "reponse": "Hard Disk Drive"
     },
     {
-        "question": "",
-        "reponse": ""
+        "question": "Que veut dire SSD ?",
+        "reponse": "Solid State Drive"
     },
     {
         "question": "",
