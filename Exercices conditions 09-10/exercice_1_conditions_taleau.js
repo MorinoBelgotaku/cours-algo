@@ -11,20 +11,28 @@ const mois_28 = ['FEVRIER'];
 
 (async function () {
 
-    let mois = await input({ message: 'Donnez-moi le nom d\'un mois' });
+    console.clear();
+
+    let mois = await input({ message: 'Donnez-moi le nom d\'un mois :' });
     mois = mois.toUpperCase();
 
+    while (mois_31.includes(mois) == false && mois_30.includes(mois) == false && mois_28.includes(mois) == false){
+        console.clear();
+        console.log(`Le mois ${mois.toLowerCase()} n'existe pas.`);
+        mois = await input({ message: 'Donnez-moi le nom d\'un mois :' });
+        mois = mois.toUpperCase();
+    }
+
+    console.clear();
+
     if (mois_31.includes(mois)) {
-        console.log('31 jours')
+        console.log(`31 jours dans le mois de ${mois.toLocaleLowerCase()}.`);
     } 
     else if (mois_30.includes(mois)) {
-            console.log('30 jours')
+            console.log(`30 jours dans le mois de ${mois.toLocaleLowerCase()}.`);
     } 
-    else if(mois_28.includes(mois)) {
-        console.log('28 jours')
-    }
     else {
-        console.log("Mois invalide.")
+        console.log(`28 jours dans le mois de ${mois.toLocaleLowerCase()}.`);
     }
 
 })();
