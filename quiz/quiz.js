@@ -16,13 +16,13 @@ const fs = require('fs');
 
     console.log(chalk.red(`⚠️  Interdiction d'utiliser ${chalk.yellow("internet")} ou votre ${chalk.yellow("calculatrice")} !⚠️\nLa prise d'accent sur les caracteres n'est pas prise en compte.`))
     console.log(`\nAppuyer sur ${chalk.green("Entree")} pour accepter les regles.\n`)
-    let pause = await input({ message: `` });
+    var pause = await input({ message: `` });
     console.clear();
 
 
     // Boucle
 
-    let recommencer = true;
+    var recommencer = true;
 
     while (recommencer == true) {
         console.clear();
@@ -30,19 +30,21 @@ const fs = require('fs');
         // Variables
 
         shuffle(quiz);
-        let total = 0;
+        var total = 0;
+        var questions_resultats = [];
 
 
         // Questions et calcul réponse
 
         var start = Date.now()
-        for (let i = 0; i < quiz.length; i++) {
-            let reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
+        for (var i = 0; i < quiz.length; i++) {
+            var reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             while (reponse == "") {
                 console.clear();
                 reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             }
             quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? total++ : null;
+            questions_resultats.push(quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? `\n\nQuestion ${i+1} : ${quiz[i]["question"]}\nReponse : ${reponse} (correct)` : `\n\nQuestion ${i+1} : ${quiz[i]["question"]}\nReponse : ${reponse} (incorrect)`)
             console.clear();
         }
         var end = Date.now()
@@ -68,11 +70,27 @@ const fs = require('fs');
                 }
             ],
         });
-
-        const resultat = `Total : ${total}/${quiz.length}.\nTemps realise : ${temps} sec.`;
-        fs.writeFileSync(`dernier resultat.txt`, resultat);    
-        console.log('File written successfully');
-
     }
+
+    const sauvegarder = await select({
+        message: 'Voulez-vous sauvegarder votre resultat ?',
+        choices: [
+            {
+                name: 'Oui',
+                value: true
+            },
+            {
+                name: 'Non',
+                value: false
+            }
+        ],
+    });
+
+    if (sauvegarder == true) {
+        var dernier_resultat = `Total : ${total}/${quiz.length}.\nTemps realise : ${temps} sec.\n\n\nResultats questions :${questions_resultats}`;
+        dernier_resultat = dernier_resultat.replaceAll(',', ' ');
+        fs.writeFileSync(`dernier resultat.txt`, dernier_resultat);
+    }
+
     console.clear();
 })();
