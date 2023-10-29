@@ -69,14 +69,14 @@
     },
     {
         "question": "Quelle est la formule de la relativite restreinte d'Albert Einstein ? (formule colle)",
-        "reponse": "E=MC2"
+        "reponse": "E=mc2"
     },
     {
-        "question": "",
-        "reponse": ""
+        "question": "Que veut dire RAM ?",
+        "reponse": "Random Access Memory"
     },
     {
-        "question": "Combien font 2 + 2 ?",
-        "reponse": "4"
+        "question": "De combien de bit est composé un octet ? (chiffre)",
+        "reponse": "8"
     }
 ]
