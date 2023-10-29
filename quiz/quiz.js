@@ -3,6 +3,7 @@ const { input, select } = require('@inquirer/prompts'); // npm i @inquirer/promp
 const chalk = require('chalk');
 const shuffle = require('shuffle-array');
 const quiz = require('./questions.json');
+const fs = require('fs');
 
 
 // Debut Code
@@ -21,9 +22,9 @@ const quiz = require('./questions.json');
 
     // Boucle
 
-    let recommencer = 'true';
+    let recommencer = true;
 
-    while (recommencer == 'true') {
+    while (recommencer == true) {
         console.clear();
 
         // Variables
@@ -34,6 +35,7 @@ const quiz = require('./questions.json');
 
         // Questions et calcul réponse
 
+        var start = Date.now()
         for (let i = 0; i < quiz.length; i++) {
             let reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             while (reponse == "") {
@@ -43,12 +45,13 @@ const quiz = require('./questions.json');
             quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? total++ : null;
             console.clear();
         }
-
+        var end = Date.now()
+        var temps = (end-start)/1000;
 
         // Affichage total
 
         console.clear();
-        console.log(chalk.cyan(`Tu as un total de ${total}/${quiz.length} ! ${total / quiz.length >= 0.5 ? `😀\n${chalk.green('Felicitations !\n')}` : `😭\n${chalk.red('Tu peux mieux faire !\n')}`}`));
+        console.log(chalk.cyan(`Tu as un total de ${total}/${quiz.length} ! ${total / quiz.length >= 0.5 ? `😀\n${chalk.green('Felicitations !\n')}` : `😭\n${chalk.red('Tu peux mieux faire !\n')}`}\nTemps realise : ${temps} sec.\n`));
 
         // Recommencer
 
@@ -57,14 +60,19 @@ const quiz = require('./questions.json');
             choices: [
                 {
                     name: 'Oui',
-                    value: 'true',
+                    value: true
                 },
                 {
                     name: 'Non',
-                    value: 'false',
+                    value: false
                 }
             ],
         });
+
+        const resultat = `Total : ${total}/${quiz.length}.\nTemps realise : ${temps} sec.`;
+        fs.writeFileSync(`dernier resultat.txt`, resultat);    
+        console.log('File written successfully');
+
     }
     console.clear();
 })();
