@@ -41,7 +41,7 @@ const fs = require('fs');
         questions_resultats = [];
 
 
-        // Questions et calcul réponse
+        // Questions et calcul réponse avec "chronomètre"
 
         let start = Date.now()
         for (let i = 0; i < quiz.length; i++) {
@@ -78,6 +78,9 @@ const fs = require('fs');
             ],
         });
     }
+
+
+    // Sauvegarde du résultat du quiz
 
     const sauvegarder = await select({
         message: 'Voulez-vous sauvegarder votre resultat ?',
