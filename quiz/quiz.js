@@ -45,7 +45,7 @@ const fs = require('fs');
 
         let start = Date.now()
         for (let i = 0; i < quiz.length; i++) {
-            const reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
+            let reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             while (reponse == "") {
                 console.clear();
                 reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
