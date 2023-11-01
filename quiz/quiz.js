@@ -16,39 +16,45 @@ const fs = require('fs');
 
     console.log(chalk.red(`⚠️  Interdiction d'utiliser ${chalk.yellow("internet")} ou votre ${chalk.yellow("calculatrice")} !⚠️\nLa prise d'accent sur les caracteres n'est pas prise en compte.`))
     console.log(`\nAppuyer sur ${chalk.green("Entree")} pour accepter les regles.\n`)
-    var pause = await input({ message: `` });
+    let pause = await input({ message: `` });
     console.clear();
+
+
+    // Declaration de variables
+
+    let recommencer = true;
+    let total
+    let temps
+    let questions_resultats = [];
 
 
     // Boucle
 
-    var recommencer = true;
-
     while (recommencer == true) {
         console.clear();
 
-        // Variables
+        // Parametre variables
 
         shuffle(quiz);
-        var total = 0;
-        var questions_resultats = [];
+        total = 0;
+        questions_resultats = [];
 
 
         // Questions et calcul réponse
 
-        var start = Date.now()
-        for (var i = 0; i < quiz.length; i++) {
-            var reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
+        let start = Date.now()
+        for (let i = 0; i < quiz.length; i++) {
+            const reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             while (reponse == "") {
                 console.clear();
                 reponse = await input({ message: `Q.${i+1} | ${chalk.cyan(`${quiz[i]['question']}`)}` });
             }
             quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? total++ : null;
-            questions_resultats.push(quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? `\n\nQuestion ${i+1} : ${quiz[i]["question"]}\nReponse : ${reponse} (correct)` : `\n\nQuestion ${i+1} : ${quiz[i]["question"]}\nReponse : ${reponse} (incorrect)`)
+            questions_resultats.push(quiz[i]['reponse'].toUpperCase() == reponse.toUpperCase() ? `\n\nQuestion ${i+1} : ${quiz[i]["question"]}\nReponse : ${reponse} (correct)` : `\n\nQuestion ${i+1} : ${quiz[i]["question"]}\nVotre reponse : ${reponse} (incorrect)\nLa bonne reponse : ${quiz[i]["reponse"]}`)
             console.clear();
         }
-        var end = Date.now()
-        var temps = (end-start)/1000;
+        let end = Date.now()
+        temps = (end-start)/1000;
 
         // Affichage total
 
@@ -87,7 +93,7 @@ const fs = require('fs');
     });
 
     if (sauvegarder == true) {
-        var dernier_resultat = `Total : ${total}/${quiz.length}.\nTemps realise : ${temps} sec.\n\n\nResultats questions :${questions_resultats}`;
+        let dernier_resultat = `Total : ${total}/${quiz.length}.\nTemps realise : ${temps} sec.\n\n\nResultats questions :${questions_resultats}`;
         dernier_resultat = dernier_resultat.replaceAll(',', ' ');
         fs.writeFileSync(`dernier resultat.txt`, dernier_resultat);
     }
