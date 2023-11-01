@@ -12,22 +12,23 @@ const fs = require('fs');
 
     console.clear();
 
+     // Declaration de variables
+    
+     let pause
+     let recommencer = true;
+     let total
+     let temps
+     let questions_resultats = [];
+ 
+ 
     // Regles
 
     console.log(chalk.red(`⚠️  Interdiction d'utiliser ${chalk.yellow("internet")} ou votre ${chalk.yellow("calculatrice")} !⚠️\nLa prise d'accent sur les caracteres n'est pas prise en compte.`))
     console.log(`\nAppuyer sur ${chalk.green("Entree")} pour accepter les regles.\n`)
-    let pause = await input({ message: `` });
+    pause = await input({ message: `` });
     console.clear();
 
-
-    // Declaration de variables
-
-    let recommencer = true;
-    let total
-    let temps
-    let questions_resultats = [];
-
-
+   
     // Boucle
 
     while (recommencer == true) {
