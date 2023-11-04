@@ -8,7 +8,7 @@ const isNumber = require('is-number');
 
     let somme = 0;
     let n = await input({ message: `Donner un nombre premier :` });
-    while (isFloat(n) == true || isNumber(n) == false) {
+    while (isFloat(n) == true || isNumber(n) == false || n <= 0) {
         n = await input({ message: `Donner un nombre premier :` });
     }
 
