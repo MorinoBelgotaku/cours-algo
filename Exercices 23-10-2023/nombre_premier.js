@@ -1,4 +1,4 @@
-const { input, select } = require('@inquirer/prompts'); // npm i @inquirer/prompts (version : 3.2.0)
+const { input } = require('@inquirer/prompts'); // npm i @inquirer/prompts (version : 3.2.0)
 
 (async function () {
     function test_prime(num) {
