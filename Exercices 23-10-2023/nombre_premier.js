@@ -21,7 +21,7 @@ const isNumber = require('is-number');
       }
 
       for(let i=1; i<=n; i++) {
-        console.log(`Nombre : ${i} ${(test_prime(i) ? "est nombre premier" : "")}`);
+        console.log(`Nombre : ${i} ${(test_prime(i) ? "est un nombre premier" : "")}`);
     }
 
     test_prime(n) ? console.log(`${n} est un nombre premier`) : console.log(`${n} n'est pas un nombre premier`);
