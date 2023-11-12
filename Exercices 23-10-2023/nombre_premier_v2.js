@@ -35,6 +35,6 @@ const isNumber = require('is-number');
   // Resultat
 
   for (let i = 1; i <= n; i++) {
-    premier(i) ? console.log(`${i} est un nombre premier`) : console.log(`${i} n'est pas un nombre premier`);
+    console.log(premier(i) ? `${i} est un nombre premier` : `${i} n'est pas un nombre premier`);
   }
 })();

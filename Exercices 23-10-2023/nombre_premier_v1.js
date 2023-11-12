@@ -8,7 +8,7 @@ const isNumber = require('is-number');
 
   // Declaration de variable
 
-  let prime
+  let premier
   let diviseurs = []
 
 
@@ -28,14 +28,14 @@ const isNumber = require('is-number');
     }
   }
   if (diviseurs.length == 2) {
-    prime = true
+    premier = true
   }
   else {
-    prime = false
+    premier = false
   }
 
 
   // Resultat
 
-  prime ? console.log(`${n} est un nombre premier`) : console.log(`${n} n'est pas un nombre premier`);
+  console.log(premier ? `${n} est un nombre premier` : `${n} n'est pas un nombre premier`);
 })();
