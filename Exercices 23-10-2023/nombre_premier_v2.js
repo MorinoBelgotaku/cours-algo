@@ -6,10 +6,22 @@ const isNumber = require('is-number');
 
   console.clear()
 
-  // Declaration de variable
-  
-  let prime
-  let diviseurs = []
+  // Fonction
+
+  function premier(n) {
+    diviseurs = []
+    for (let i = 1; i <= n; i++) {
+      if (n % i == 0) {
+        diviseurs.push(i)
+      }
+    }
+    if (diviseurs.length == 2) {
+      return true
+    }
+    else {
+      return false
+    }
+  }
 
 
   // Question
@@ -20,22 +32,9 @@ const isNumber = require('is-number');
   }
 
 
-  // Verification
-
-  for (let i=1; i <= n; i++) {
-    if (n%i==0) {
-      diviseurs.push(i)
-    }
-  }
-  if (diviseurs.length == 2) {
-    prime = true
-  }
-  else {
-    prime = false
-  }
-
-
   // Resultat
 
-  prime ? console.log(`${n} est un nombre premier`) : console.log(`${n} n'est pas un nombre premier`);
+  for (let i = 1; i <= n; i++) {
+    premier(i) ? console.log(`${i} est un nombre premier`) : console.log(`${i} n'est pas un nombre premier`);
+  }
 })();
