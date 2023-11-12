@@ -3,26 +3,39 @@ const isFloat = require('is-float');
 const isNumber = require('is-number');
 
 (async function () {
-    function test_prime(num) {
-        if (num <= 1) {
-          return false;
-        }
-        for (let i = 2; i <= Math.sqrt(num); i++) {
-          if (num % i === 0) {
-            return false;
-          }
-        }
-        return true;
-      }
 
-      let n = await input({ message: `Donner un nombre premier :` });
-      while (isFloat(n) == true || isNumber(n) == false || n <= 0) {
-          n = await input({ message: `Donner un nombre premier :` });
-      }
+  console.clear()
 
-      for(let i=1; i<=n; i++) {
-        console.log(`Nombre : ${i} ${(test_prime(i) ? "est un nombre premier" : "")}`);
+  // Declaration de variable
+  
+  let prime
+  let diviseurs = []
+
+
+  // Question
+
+  let n = await input({ message: `Donner un nombre premier :` });
+  while (isFloat(n) == true || isNumber(n) == false || n <= 0) {
+    n = await input({ message: `Donner un nombre premier :` });
+  }
+
+
+  // Verification
+
+  for (let i=1; i <= n; i++) {
+    if (n%i==0) {
+      diviseurs.push(i)
     }
+  }
+  if (diviseurs.length == 2) {
+    prime = true
+  }
+  else {
+    prime = false
+  }
 
-    test_prime(n) ? console.log(`${n} est un nombre premier`) : console.log(`${n} n'est pas un nombre premier`);
+
+  // Resultat
+
+  prime ? console.log(`${n} est un nombre premier`) : console.log(`${n} n'est pas un nombre premier`);
 })();
