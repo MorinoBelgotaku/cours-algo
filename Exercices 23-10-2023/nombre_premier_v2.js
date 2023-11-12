@@ -1,6 +1,7 @@
 const { input } = require('@inquirer/prompts'); // npm i @inquirer/prompts (version : 3.2.0)
 const isFloat = require('is-float');
 const isNumber = require('is-number');
+const chalk = require('chalk');
 
 (async function () {
 
@@ -35,6 +36,6 @@ const isNumber = require('is-number');
   // Resultat
 
   for (let i = 1; i <= n; i++) {
-    console.log(premier(i) ? `${i} est un nombre premier` : `${i} n'est pas un nombre premier`);
+    console.log(premier(i) ? chalk.green(`${i} est un nombre premier`) : chalk.red(`${i} n'est pas un nombre premier`));
   }
 })();
