@@ -16,12 +16,7 @@ const chalk = require('chalk');
         diviseurs.push(i)
       }
     }
-    if (diviseurs.length == 2) {
-      return true
-    }
-    else {
-      return false
-    }
+    return diviseurs.length == 2
   }
 
 
