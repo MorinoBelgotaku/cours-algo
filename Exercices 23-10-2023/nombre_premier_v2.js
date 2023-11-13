@@ -27,9 +27,9 @@ const chalk = require('chalk');
 
   // Question
 
-  let n = await input({ message: `Donner un nombre premier :` });
+  let n = await input({ message: `Donner un nombre :` });
   while (isFloat(n) == true || isNumber(n) == false || n <= 0) {
-    n = await input({ message: `Donner un nombre premier :` });
+    n = await input({ message: `Donner un nombre :` });
   }
 
 
