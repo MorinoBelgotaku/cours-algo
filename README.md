@@ -1,7 +1,6 @@
-# Pré-requis
+# Introduction
 
-- [**NodesJS**](https://nodejs.org/en/download/current)
-- [**Git**](https://git-scm.com/)
+- WIP
 
 # Sommaire
 
