@@ -8,7 +8,7 @@
 1. Copier la commande pour créer un dossier qui clonera le contenue du dépôt.
 
 ```shell
-git clone https://github.com/MorinoBelgotaku/cours-algo.git
+git clone https://github.com/MorinoBelgotaku/cours-algo/javascript
 ```
 
 2. Installer les modules requis au bon fonctionnement des scripts.
