@@ -14,7 +14,7 @@ const t4 = Array('pomme','poire');
 
 // Pousser des infos dans le tableau
 
-t3.push('orange');
+t3.push('orange','melon');
 
 
 // Recuperer les infos depuis le tableau
