@@ -36,7 +36,7 @@ const users = [
 
 console.log(users)
 
-for (let i = 0; i < user.length; i++) {
+for (let i = 0; i < users.length; i++) {
     console.log(users[i].firstname,users[i].lastname)
 }
 
