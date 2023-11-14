@@ -4,4 +4,4 @@
 
 # Sommaire
 
-1. [Javascript](./javascript/README.md)
+- [Javascript](./javascript/README.md)
