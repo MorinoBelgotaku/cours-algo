@@ -11,7 +11,7 @@
 git clone https://github.com/MorinoBelgotaku/cours-algo.git
 ```
 
-3. Garder que le dossier Javascript
+3. Garder que le dossier Javascript.
 
 2. Installer les modules requis au bon fonctionnement des scripts.
 
