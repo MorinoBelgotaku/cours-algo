@@ -42,13 +42,11 @@ const users = [
 ]
 
 users.forEach(user => {
-    console.log(user.firstname + ' ' + user.lastname)
-    if (users.addresses) {
-        const addresses = users.addresses
-        addresses.forEach(adress => {
-            console.log(adress.street)
+    console.log(`${user.firstname} ${user.lastname}`)
+    if(user.addresses) {
+        const addresses = user.addresses;
+        addresses.forEach(address => {
+            console.log(`${address.street}, ${address.number} `)
         })
     }
 })
-
-console.log(users[0].addresses[0].street)
