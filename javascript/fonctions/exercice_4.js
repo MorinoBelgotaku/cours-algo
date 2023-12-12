@@ -1,10 +1,5 @@
 function test_pair(n) {
-    if (n%2 == 0) {
-        return true
-    }
-    else {
-        return false
-    }
+    return n % 2 == 0 ? true : false;
 }
 
-console.log(test_pair(2))
+console.log(test_pair(3))
