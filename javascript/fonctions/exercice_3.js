@@ -1,6 +1,6 @@
 const nombres = [10, 20, 144, 30, 88, 33, 245]
 
-function nombre_plus_grand(t, pg) {
+function nombre_plus_grand(t) {
     let grand_nombre = 0;
     for (let i = 0; i < t.length; i++) {
         if (t[i] > grand_nombre) {
