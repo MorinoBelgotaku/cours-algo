@@ -9,9 +9,12 @@ function listNumber(numberStart, NumberFinish, hop) {
     return tableau
 }
 
+console.log(listNumber(100, 78, 7))
+console.log(listNumber(78, 100, 1))
 console.log(listNumber(78, 100, 3))
 console.log(listNumber(78, 100, 5))
 console.log(listNumber(78, 100, 7))
+
 
 // console.log(listNumber(7, 15))
 // console.log(listNumber(56, 78))
