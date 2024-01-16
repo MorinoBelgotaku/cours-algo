@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
     <style>
+        html {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
         div {
             padding: 5px 0px;
         }
