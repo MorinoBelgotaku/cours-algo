@@ -14,22 +14,37 @@
             user-select: none;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+
         form {
             display: flex;
             flex-direction: column;
         }
 
-        input, select {
+        input,
+        select {
             margin-bottom: 10px;
+            padding: 5px;
         }
 
         div {
             text-align: center;
         }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-decoration-line: underline;
+            text-align: center;
+            padding: 0.5em 1em;
+        }
     </style>
 </head>
 
 <body>
+    <h2>Inscription</h2>
     <form method="post" action="save.php">
         <label for="nom">Nom:</label>
         <input type="text" id="nom" name="nom">
@@ -47,8 +62,8 @@
         <!-- <label for="nom">Image:</label>
         <input type="file" id="image" name="image"> -->
         <div>
-        <input type="submit" name="btnadd" value="Valider">
-        <input type="reset" value="Effacer">
+            <input type="submit" name="btnadd" value="Valider">
+            <input type="reset" value="Effacer">
         </div>
     </form>
 </body>
