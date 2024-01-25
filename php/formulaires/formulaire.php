@@ -35,6 +35,8 @@
         <input type="text" id="nom" name="nom">
         <label for="prenom">Prénom:</label>
         <input type="text" id="prenom" name="prenom">
+        <label for="prenom">Email:</label>
+        <input type="email" id="email" name="email">
         <label for="date_naissance">Date de naissance:</label>
         <input type="date" id="date_naissance" name="date_naissance">
         <label for="civilite">Civilite:</label>
@@ -42,8 +44,8 @@
             <option value="1">Monsieur</option>
             <option value="0">Madame</option>
         </select>
-        <label for="nom">Image:</label>
-        <input type="file" id="image" name="image">
+        <!-- <label for="nom">Image:</label>
+        <input type="file" id="image" name="image"> -->
         <div>
         <input type="submit" name="btnadd" value="Valider">
         <input type="reset" value="Effacer">
