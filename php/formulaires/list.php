@@ -2,8 +2,8 @@
 <?php
 
 // Username is root
-$user = 'morin_bruno';
-$password = 'Bruno123';
+$user = 'test';
+$password = 'test123';
 
 // Database name is geeksforgeeks
 $database = 'exercices';
@@ -76,6 +76,7 @@ $mysqli->close();
 			<tr>
 				<th>Nom</th>
 				<th>Prénom</th>
+				<th>Email</th>
 				<th>Date de naissance</th>
 				<th>Civilite</th>
 			</tr>
@@ -90,9 +91,9 @@ $mysqli->close();
 					ROW OF EVERY COLUMN -->
 				<td><?php echo $rows['nom'];?></td>
 				<td><?php echo $rows['prenom'];?></td>
+				<td><?php echo $rows['email'];?></td>
 				<td><?php echo $rows['date_naissance'];?></td>
 				<td><?php echo $rows['civilite'] == 1 ? "Monsieur" : "Madame";?></td>
-				<td><img src="data:image/jpeg;blob,<?php echo $rows['image'];?>"></td>
 			</tr>
 			<?php
 				}

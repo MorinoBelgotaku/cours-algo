@@ -18,6 +18,8 @@
         form {
             display: flex;
             flex-direction: column;
+            width: 10em;
+            margin: 0 auto;
         }
 
         input,
@@ -40,11 +42,15 @@
             text-align: center;
             padding: 0.5em 1em;
         }
+        fieldset {
+            width: 25em;
+        }
     </style>
 </head>
 
 <body>
-    <h2>Inscription</h2>
+    <fieldset>
+    <legend><h2>Inscription</h2></legend>
     <form method="post" action="save.php">
         <label for="nom">Nom:</label>
         <input type="text" id="nom" name="nom">
@@ -66,6 +72,7 @@
             <input type="reset" value="Effacer">
         </div>
     </form>
+    </fieldset>
 </body>
 
 </html>
